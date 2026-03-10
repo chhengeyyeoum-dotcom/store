@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+body {
+  background-color: #fffbf4;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 60px; /* adjust to your navbar height */
+}
+
+.header{
+display:flex;
+position: fixed;
+align-items:center;
+justify-content:space-between;
+padding:15px 40px;
+background-color: #d8cfbc;
+}
+
+
+.menu{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.menu a{
+text-decoration:none;
+color:#333;
+font-size:14px;
+}
+
+.header__secondary-nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.menu-toggle{
+display:none;
+background:none;
+border:none;
+font-size:24px;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+.menu{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:white;
+padding:20px;
+}
+
+.menu.open {
+  display: flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+  /* mobile horizontal product slider */
+  .product-slider {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  .product-slider .row {
+    flex-wrap: nowrap;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .product-slider .col-md-3 {
+    flex: 0 0 85%;
+    max-width: 85%;
+    scroll-snap-align: start;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .product-slider .card {
+    min-width: 85%;
+  }
+
+  .product-slider::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .product-slider::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+}
+
+.my-custom-btn {
+  /*font-family: 'Playfair Display', sans-serif;*/
+  font-weight: 400;
+  font-size: larger;
+  width: 200px;
+  background-color: #fffbf4;
+  color: #11120d;
+  border-color: #fffbf4;
+}
+
+.my-custom-btn:hover {
+  background-color: #11120d;
+  color: #fffbf4;
+  border-color: #11120d;
+}
+
+
+.hero-cover1{
+    background-image: url("./image/no-revisions-CU8ujrbkvCM-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+.hero-cover{
+    background-image: url("./image/pexels-julia-viktorovna-155339386-27549292.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+.navbar {
+    background-color: #d8cfbc;
+}
+
+.featured-box {
+    background-color: #fffbf4; /* <-- set your desired color here */
+    height: 120px;
+    border: 3px solid #7b1e16;
+    border-radius: 6px;
+}
+
+.footer {
+    background: #d8cfbc;
+    color: #11120d;
+    padding: 50px 0;
+    font-size: smaller;
+}
+
+.footer a {
+    color: #11120d;
+}
+
+.footer a:hover {
+    color: 11120d;
+    text-decoration: none;
+}
+
+.navbar-toggler-icon {
+    width: 500px;
+    border-radius: 50%;
+    /*border: 1px solid #11120d;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.social-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /*border: 1px solid #11120d;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    font-size: smaller;
+    background-color: #11120d;
+    border-color: #11120d;
+}
+
+.btn-primary:hover {
+    background-color: #11120d;
+}
+
+/* make email inputs look like an outline field instead of a solid fill */
+input[type="email"].form-control,
+.form-control[type="email"] {
+    font-size: smaller;
+    background-color: transparent;
+    border: 1px solid #11120d;
+    border-radius: 0.25rem;
+}
+
+input[type="email"].form-control::placeholder {
+    font-size: smaller;
+    color: #11120d;
+    opacity: 1;
+}
+
+/* make card images fill their box without stretching */
+.card-img-top {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    height: auto;
+    object-fit: cover;
+}
+
