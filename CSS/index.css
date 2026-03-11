@@ -1,0 +1,45 @@
+/* ...Home Page... */
+
+.banner {
+    min-height: 60vh;
+    background: url('/image/pexels-julia-viktorovna-155339386-27549292.jpg') center/cover no-repeat;
+    position: relative;
+}
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+.banner .container {
+    position: relative;
+    z-index: 1;
+}
+@media (max-width: 576px) {
+    .banner {
+        min-height: 45vh;
+    }
+    .banner h1 {
+        font-size: 1.75rem;
+    }
+}
+@media (max-width:768px) {
+  .product-slider {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+  }
+
+  .product-slider .row {
+    flex-wrap: nowrap;
+  }
+
+  .product-slider .col-md-3 {
+    flex: 0 0 85%;
+    max-width: 85%;
+  }
+
+  .product-slider .card {
+    min-width: 85%;
+  }
+}
